@@ -15,6 +15,7 @@ jobs:
       sha256-mac: ${{ steps.sha256.outputs.sha256-macos-latest }}
       sha256-win: ${{ steps.sha256.outputs.sha256-windows-latest }}
     steps:
+      - run: git config --global core.autocrlf false
       - uses: actions/checkout@v2
       - uses: oracle-actions/setup-java@v1
         with:
