@@ -22,6 +22,7 @@ jobs:
           release: 19
       - run: jar --create --file a.jar --date 2022-09-20T00:00Z LICENSE README.md
       - id: sha256
+        shell: bash
         run: |
           SHA256=$(sha256sum a.jar)
           echo $SHA256
